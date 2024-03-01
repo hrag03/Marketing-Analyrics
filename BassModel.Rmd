@@ -85,4 +85,19 @@ Estimating the market potential of the Sonos Era 300 Speaker using Fermi’s log
 Let's say that there are 8 billion people in the world. 40% prefer to have speakers at their houses. However, considering the fact that there are wide variety of options that some prefer budget speakers, that 40% drops down to 25%. Now there are people that would like to have the option of the voice assitant, hence 25% goes down to 10%, now some don't prefer wired speakers (not battery based), so it will be 3%. So the final count comes to 240million tops.
 
 
+``` {r}
+Innovators <- 0.025 * 240000000
+Early_Adopters <- 0.135 * 240000000
+Early_Majority <- 0.34 * 240000000
+Late_Majority <- 0.34 * 240000000
+Laggards <- 0.16 * 240000000
+
+categories <- c("Innovators", "Early Adopters", "Early Majority", "Late Majority", "Laggards")
+counts <- c(Innovators, Early_Adopters, Early_Majority, Late_Majority, Laggards)
+population_data <- data.frame(Category = categories, Population_Count = counts)
+
+print(population_data)
+```
+
+
 Data: https://www.statista.com/statistics/1022701/worldwide-amazon-echo-unit-shipment/
